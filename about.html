@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+<style>
+#success_message{
+     display: none;
+}
+    
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg bg-success navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Website</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="">
+            <a class="nav-link active" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/about.html">about</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/index.html">contact us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <div class="mx-2 my-2">
+
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#LoginModal" type="">Login</button>
+          <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#SignupModal" type="">Signup</button>
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+    <div class="container my-4 ">
+
+        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <div class="row d-flex justify-content-center align-items-center">
+
+    <legend><center><h2><b>Registration Form</b></h2></center></legend><br>
+  </div>
+
+    <!-- Text input-->
+    
+    <div class="form-group">
+     <div class="row d-flex justify-content-center align-items-center">
+      <label class="col-md-2 control-label">First Name</label>
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="first_name" placeholder="First Name" class="form-control"  type="text"><br><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <div class="row d-flex justify-content-center align-items-center">
+
+      <label class="col-md-2 control-label" >Last Name</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <div class="form-group"> 
+        <div class="row d-flex justify-content-center align-items-center">
+
+      <label class="col-md-2 control-label">Department / Office</label>
+        <div class="col-md-4 selectContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+        <select name="department" class="form-control selectpicker">
+          <option value="">Select your Department/Office</option>
+          <option>Department of Engineering</option>
+          <option>Department of Agriculture</option>
+          <option >Accounting Office</option>
+          <option >Tresurer's Office</option>
+          <option >MPDC</option>
+          <option >MCTC</option>
+          <option >MCR</option>
+          <option >Mayor's Office</option>
+          <option >Tourism Office</option>
+        </select>
+      </div>
+    </div>
+    </div>
+  </div>
+
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <div class="row d-flex justify-content-center align-items-center">
+
+      <label class="col-md-2 control-label">Username</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="user_name" placeholder="Username" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <div class="row d-flex justify-content-center align-items-center">
+
+      <label class="col-md-2 control-label" >Password</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="user_password" placeholder="Password" class="form-control"  type="password">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <div class="row d-flex justify-content-center align-items-center">
+
+      <label class="col-md-2 control-label" >Confirm Password</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Text input-->
+           <div class="form-group">
+            <div class="row d-flex justify-content-center align-items-center">
+
+      <label class="col-md-2 control-label">E-Mail</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+    <!-- Text input-->
+           
+    <div class="form-group">
+      <div class="row d-flex justify-content-center align-items-center">
+
+      <label class="col-md-2 control-label">Contact No.</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+      <input name="contact_no" placeholder="(639)" class="form-control" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Select Basic -->
+    
+    <!-- Success message -->
+    <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+    
+    <!-- Button -->
+    <div class="form-group">
+      <div class="container">
+
+      <div class="row  d-flex justify-content-center align-items-center">
+        <label class="col-md-5 control-label"></label>  
+        <div class="d-grid gap-1 col-6 mx-auto">
+
+      <div class="col-md-6"><br>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-success btn-md" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+    </fieldset>
+    </form>
+    </div>
+        </div><!-- /.container -->
+        <br>
+        <br>
+
+<footer>
+    <div class="container-fluid footer-camp" style="background-color: #555;">
+    <div class="container"><br>
+    <div class="row text-center">
+    <div class="col-sm-12 text-center">
+    <div class="text-center" style="color: #fff;"><span style="color: #fff;">Call :</span> <a style="color: #fff; text-decoration: none; font-weight: bold;" href="tel:1800 266 5522">1800 266 5522</a> | <a style="color: #fff; text-decoration: none;" href="sms:53456?body=REFER">SMS : <span style="font-weight: bold;"> 'LIFECELL' </span> to <span style="font-weight: 500;">53456</span></a> | <a style="color: #fff; text-decoration: none; font-weight: bold;" href="https://www.lifecell.in" target="_blank">www.lifecell.in</a><hr style="border-top: 1px solid grey; width: 100%;"></div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-12 text-center">
+    <div class="text-center" style="font-weight: bold; margin-bottom: 10px; color: #fff;">Connect with us</div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-12 text-center"><a href="https://in.linkedin.com/company/lifecell-international-pvt-ltd" target="_blank"><img class="bg-linked" src="https://www.lifecell.in/media/gene-cms/t/r/transparent_1.png"></a> <a href="https://www.youtube.com/channel/UCYIW6pfPUPByeSz6jIy8mdg?disable_polymer=true" target="_blank"><img class="bg-youtube" src="https://www.lifecell.in/media/gene-cms/t/r/transparent_1.png"></a> <a href="https://plus.google.com/+LifecellIn" target="_blank"><img class="bg-googleplus" src="https://www.lifecell.in/media/gene-cms/t/r/transparent_1.png"></a> <a href="https://www.facebook.com/LifeCellInternational/" target="_blank"><img class="bg-facebook" src="https://www.lifecell.in/media/gene-cms/t/r/transparent_1.png"></a> <a href="http://blog.lifecell.in/" target="_blank"><img class="bg-blogger" src="https://www.lifecell.in/media/gene-cms/t/r/transparent_1.png"></a> <a href="https://twitter.com/Lifecellint?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img class="bg-tweet" src="https://www.lifecell.in/media/gene-cms/t/r/transparent_1.png"></a> <a href="https://www.instagram.com/lifecellin/" target="_blank"><img class="bg-insta" src="https://www.lifecell.in/media/gene-cms/t/r/transparent_1.png"></a></div>
+    </div>
+    <div class="row">
+    <div class="col-sm-12 text-center">
+    <div style="color: #fff; font-size: 10px; margin: 15px 0px;">Copyright 2019 Lifecell | All Rights Reserved | <a id="show_2" style="color: #fff; text-decoration: none;" target="_blank">Privacy Policy |</a> <a id="show_1" style="color: #fff; text-decoration: none;">Terms &amp; Conditions</a>
+    <div class="menu_2" style="display: none;">
+    <h5 class="text-left col-pnk">Privacy Policy</h5>
+    <div class="text-left">
+    <div style="font-size: 11px; line-height: 13px; text-align: justify;">At LifeCell, we value the sensitive and private nature of the personal information you provide us over the Internet. Our Privacy Policy details how we treat your personal information, as well as the steps we take to protect your privacy. We understand that by using the LifeCell website, you consent to our use of information collected on this website in accordance with the terms of this Privacy Policy. Please read through the LifeCell Privacy Policy and if you do not agree with any term here, please do not provide any personal information on this site. However, if you choose not to provide personal information, you may not be able to take advantage of all the features on this site such as requesting additional information, e-mailing us or enrolling online.</div>
+    <h5 class="col-pnk">Information Protection</h5>
+    <div style="font-size: 11px; line-height: 13px; text-align: justify;">You can be assured that we will use the personal information that you provide only for the purposes indicated to you when you provided it. The information collected on this website allows us to provide the services and/or information you are requesting. For instance, we collect personal information in order to respond to requests for more information (eg. subscribe to our newsletter, signup for updates etc...)</div>
+    <h5 class="col-pnk">How We Use Your Infromation</h5>
+    <div style="font-size: 11px; line-height: 13px; text-align: justify;">We will not disclose, sell, rent, loan or exchange your personal information to any other individual, organization or entity except to the extent necessary to provide the information or services you have requested, unless you are first notified and expressly agree to it, or as otherwise required by law or regulation.</div>
+    <div style="font-size: 11px; line-height: 13px; text-align: justify;">If you become a LifeCell client, we will share some or all of the information you provide with our business partners in order to facilitate the services you have selected. For example, LifeCell will notify your doctor and your hospital that you will be preserving your newborn's cord blood with LifeCell. We will share some of your contact information with our courier services to facilitate the pick-up and transport of your cord blood unit.</div>
+    <div style="font-size: 11px; line-height: 13px; text-align: justify;">As a general rule, we will not disclose your personal information to an unrelated third party for any purpose not related to the services we offer, without first getting your express consent.</div>
+    <h5 class="col-pnk">Disclaimer</h5>
+    <div>All information provided in the LifeCell website is for informatory purposes only, and is not intended as personal medical advice. Always seek the advice of a qualified Physician, when in doubt.</div>
+    <div style="font-size: 11px; line-height: 13px; text-align: justify;">In addition to information that you submit voluntarily, we also collect some information automatically - about your browser type, operating system, IP address, the domain and host from which you access the Internet, the date and time you arrived at our site, how long you spent on the site, and the pages that you visited - to help us measure the performance of our site. Please be assured that this information will be used and analyzed only in the aggregate and will not be used to identify any individual visitor.</div>
+    </div>
+    </div>
+    <div class="menu_1" style="display: none;">
+    <h5 class="text-left col-pnk">Terms &amp; Conditions</h5>
+    <div>
+    <p style="font-size: 11px; line-height: 13px; text-align: justify;">All the EMI values are in INR.</p>
+    <p style="font-size: 11px; line-height: 13px; text-align: justify;">*Sample collection charges will be extra and will vary based on the delivering hospital.</p>
+    <p style="font-size: 11px; line-height: 13px; text-align: justify;">#Bajaj FinServ, Capital Float and Liquiloans options availabe in select locations. Kindly consult our representative to see if they are available at your locations.</p>
+    <p style="font-size: 11px; line-height: 13px; text-align: justify;">EMIs derived are based on current interest rates and are subject to change as per bank / NBFC policies.</p>
+    <p style="font-size: 11px; line-height: 13px; text-align: justify;">Details shared are inline with our current operating rates and are confirmed by cc avenue / NBFC partners.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="visible-xs"><br><br><br><br></div>
+    </footer>
+
+  <script> $(document).ready(function() {
+        $('#contact_form').bootstrapValidator({
+            // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                first_name: {
+                    validators: {
+                            stringLength: {
+                            min: 2,
+                        },
+                            notEmpty: {
+                            message: 'Please enter your First Name'
+                        }
+                    }
+                },
+                 last_name: {
+                    validators: {
+                         stringLength: {
+                            min: 2,
+                        },
+                        notEmpty: {
+                            message: 'Please enter your Last Name'
+                        }
+                    }
+                },
+                 user_name: {
+                    validators: {
+                         stringLength: {
+                            min: 8,
+                        },
+                        notEmpty: {
+                            message: 'Please enter your Username'
+                        }
+                    }
+                },
+                 user_password: {
+                    validators: {
+                         stringLength: {
+                            min: 8,
+                        },
+                        notEmpty: {
+                            message: 'Please enter your Password'
+                        }
+                    }
+                },
+                confirm_password: {
+                    validators: {
+                         stringLength: {
+                            min: 8,
+                        },
+                        notEmpty: {
+                            message: 'Please confirm your Password'
+                        }
+                    }
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please enter your Email Address'
+                        },
+                        emailAddress: {
+                            message: 'Please enter a valid Email Address'
+                        }
+                    }
+                },
+                contact_no: {
+                    validators: {
+                      stringLength: {
+                            min: 12, 
+                            max: 12,
+                        notEmpty: {
+                            message: 'Please enter your Contact No.'
+                         }
+                    }
+                },
+                 department: {
+                    validators: {
+                        notEmpty: {
+                            message: 'Please select your Department/Office'
+                        }
+                    }
+                },
+                    }
+                }
+            })
+            .on('success.form.bv', function(e) {
+                $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                    $('#contact_form').data('bootstrapValidator').resetForm();
+    
+                // Prevent form submission
+                e.preventDefault();
+    
+                // Get the form instance
+                var $form = $(e.target);
+    
+                // Get the BootstrapValidator instance
+                var bv = $form.data('bootstrapValidator');
+    
+                // Use Ajax to submit form data
+                $.post($form.attr('action'), $form.serialize(), function(result) {
+                    console.log(result);
+                }, 'json');
+            });
+    });
+    </script>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
